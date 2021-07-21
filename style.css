@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --left-margin: 30px;
+    --top-margin: 30px;
+}
+
+.cards-wrapper {
+    width: 100vw;
+    display: flex;
+    min-height: 100vh;
+}
+
+.cards {
+    margin: auto;
+    display: flex;
+}
+
+.cards__card_orange {
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.cards__card_cyan {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.cards__card_dark_cyan {
+    background-color: hsl(179, 100%, 13%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.cards__icon {
+    margin: var(--top-margin) 0 0 var(--left-margin);
+}
+
+.cards__header {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 40px;
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
+    margin: var(--top-margin) 0 0 var(--left-margin);
+}
+
+.cards__paragraph {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    margin: var(--top-margin) var(--left-margin);
+    width: 210px;
+}
+
+.cards__button {
+    margin: var(--top-margin) 0 var(--top-margin) var(--left-margin);
+    background-color: hsl(0, 0%, 95%);
+    border: 2px solid hsl(0, 0%, 95%);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.cards__button:hover {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.cards__button:hover .cards__button_text {
+    color: white;
+}
+
+.cards__button_text {
+    font-family: 'Lexend Deca', sans-serif;
+    text-transform: capitalize;
+    margin: 20px;
+    font-size: 15px;
+}
+
+.cards__button_text_orange {
+    color: hsl(31, 77%, 52%);
+}
+
+.cards__button_text_cyan {
+    color: hsl(184, 100%, 22%);
+}
+
+.cards__button_text_dark_cyan {
+    color: hsl(179, 100%, 13%);
+}
+
+@media screen and (max-width: 600px) {
+
+    .cards {
+        flex-direction: column;
+        margin: 50px auto;
+    }
+
+    .cards__card_orange {
+        background-color: hsl(31, 77%, 52%);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .cards__card_dark_cyan {
+        background-color: hsl(179, 100%, 13%);
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .cards__paragraph {
+        width: 230px;
+        margin-bottom: 0;
+    }
+
+    .cards__button_text {
+        margin: 10px;
+    }
+}
